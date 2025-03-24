@@ -1,0 +1,48 @@
+.app-wrapper {
+  display: grid;
+  grid-template-rows:  80px 1fr;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "header header"
+                        "aside main";
+}
+
+.header {
+  background-color: #ccc;
+  grid-area: header;
+  color: #fff;
+  text-align: center;
+  font-size: 48px;
+  line-height: 80px;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.nav {
+  grid-area: aside;
+  padding: 10px;
+  background-color: green;
+
+  li {
+    list-style-type: none;
+    display: block;
+
+    color: #000;
+    margin-bottom: 20px;
+
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.main-content {
+  grid-area: main;
+  padding: 20px;
+}

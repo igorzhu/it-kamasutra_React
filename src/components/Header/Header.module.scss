@@ -1,0 +1,21 @@
+
+
+.header {
+  color: #fff;
+  text-align: center;
+  font-size: 48px;
+  line-height: 80px;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.authBlock {
+  float: right;
+  line-height: 1;
+  padding: 20px;
+  font-size: 20px;
+}

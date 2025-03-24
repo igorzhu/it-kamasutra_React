@@ -1,0 +1,19 @@
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+
+  a, button {
+    display: inline-block;
+    margin: 0 5px;
+    background: none;
+    padding: 0;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &.selected {
+      color: red;
+      text-decoration: none;
+    }
+  }
+}
