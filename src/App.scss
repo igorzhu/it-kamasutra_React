@@ -37,6 +37,11 @@
     a {
       color: #fff;
       text-decoration: none;
+
+      &.active {
+        color: yellow;
+      }
+
     }
   }
 }

@@ -2,8 +2,6 @@ import Preloader from '../../Preloader/Preloader'
 import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
-    console.log('ProfileInfo props');
-    console.log(props);
 
     if(!props.profile) {
         return <Preloader/>

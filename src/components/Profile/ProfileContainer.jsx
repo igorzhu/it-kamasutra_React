@@ -38,13 +38,9 @@ const ProfileContainer = (props) => {
     let userId = params.userId;
 
     if (!userId){
-        userId = 32209;
+        userId = props.authorizedUserId;
     }
 
-    console.log('params:');
-    console.log(params);
-    console.log(navigate);
-    console.log(location);
 
     const { getUserProfile, getStatus } = props;
 
@@ -57,11 +53,6 @@ const ProfileContainer = (props) => {
 
     },[getUserProfile, getStatus, userId]);
 
-    console.log('ProfileContainer props');
-    console.log(props);
-
-
-
     return <Profile {...props} />
 }
 
@@ -69,7 +60,9 @@ const ProfileContainer = (props) => {
 let mapStateToProps = (state) => {
     return {
         profile: state.profilePage.profile,
-        status: state.profilePage.status
+        status: state.profilePage.status,
+        authorizedUserId: state.auth.userId,
+        isAuth: state.auth.isAuth
     }
 }
 
